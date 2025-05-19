@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Your Dealership | Home</title>
-  <meta name="description" content="Buy, sell or trade in your vehicle at Your Dealership" />
+  <title>Your Dealership | My Entries</title>
+  <meta name="description" content="View your saved trade entries" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -27,24 +27,17 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h2>Your Next Vehicle Awaits</h2>
-      <p>Discover the best offer for your trade and browse our inventory today.</p>
-      <a class="cta" href="trade-in.html">Start Your Appraisal</a>
-    </section>
-
-    <section id="how-it-works">
-      <h2>How it Works</h2>
-      <ol>
-        <li>Tell us about your vehicle</li>
-        <li>Receive an instant estimate</li>
-        <li>Bring your car in for a quick inspection</li>
-      </ol>
+    <section id="entries">
+      <h2>Saved Trade Entries</h2>
+      <ul id="entriesList" class="vehicle-list"></ul>
+      <button id="logoutBtn">Logout</button>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Your Dealership. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
