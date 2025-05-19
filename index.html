@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Trade-In Value Estimator | Your Dealership</title>
+  <meta name="description" content="Get an instant trade-in value for your vehicle from Your Dealership. Simple, fast, and accurate." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Your Dealership</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#trade-in">Trade-In</a></li>
+        <li><a href="#inventory">Inventory</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="trade-in">
+      <h2>Trade-In Value Estimator</h2>
+      <p>Enter your vehicle details below to get an estimated trade-in value instantly.</p>
+      <form id="tradeInForm">
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" required />
+
+        <label for="make">Make:</label>
+        <input type="text" id="make" name="make" required />
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" required />
+
+        <label for="mileage">Mileage:</label>
+        <input type="number" id="mileage" name="mileage" required />
+
+        <label for="condition">Condition:</label>
+        <select id="condition" name="condition" required>
+          <option value="excellent">Excellent</option>
+          <option value="good">Good</option>
+          <option value="fair">Fair</option>
+          <option value="poor">Poor</option>
+        </select>
+
+        <button type="submit">Get Estimate</button>
+      </form>
+
+      <div id="estimateResult"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Dealership. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
