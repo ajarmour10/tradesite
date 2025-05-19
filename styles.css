@@ -9,6 +9,9 @@ header {
   background-color: #333;
   color: #fff;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
@@ -20,6 +23,7 @@ nav ul {
   padding: 0;
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 
 nav a {
@@ -29,21 +33,30 @@ nav a {
 
 main {
   padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .hero {
-  background-color: #e2e8f0;
-  padding: 2rem;
+  background-color: #1e3a8a;
+  color: #fff;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
 .hero .cta {
   display: inline-block;
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff7f50;
   color: #fff;
   text-decoration: none;
+  font-size: 1.25rem;
+  border-radius: 4px;
 }
 
 form {
@@ -59,6 +72,11 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
+}
+
+#entries button {
+  margin-top: 1rem;
 }
 
 .vehicle-list {
