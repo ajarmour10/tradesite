@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Your Dealership | Contact</title>
-  <meta name="description" content="Get in touch with Your Dealership" />
+  <title>Your Dealership | My Entries</title>
+  <meta name="description" content="View your saved trade entries" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -25,19 +25,17 @@
   </header>
 
   <main>
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Reach out with any questions or to schedule an appointment.</p>
-      <ul>
-        <li>Phone: (555) 123-4567</li>
-        <li>Email: info@yourdealership.com</li>
-        <li>Address: 123 Main Street, Anytown, USA</li>
-      </ul>
+    <section id="entries">
+      <h2>Saved Trade Entries</h2>
+      <ul id="entriesList" class="vehicle-list"></ul>
+      <button id="logoutBtn">Logout</button>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Your Dealership. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

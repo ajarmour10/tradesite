@@ -4,10 +4,48 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  const loginForm = document.getElementById('loginForm');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const entriesList = document.getElementById('entriesList');
   const form = document.getElementById('tradeInForm');
   const resultDiv = document.getElementById('estimateResult');
 
-  if (!form) return; // Only run on pages with the form
+  if (loginForm) {
+    loginForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const user = document.getElementById('username').value.trim();
+      localStorage.setItem('loggedInUser', user);
+      window.location.href = 'trade-in.html';
+    });
+  }
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+      localStorage.removeItem('loggedInUser');
+      window.location.href = 'index.html';
+    });
+  }
+
+  if (entriesList) {
+    const entries = JSON.parse(localStorage.getItem('entries') || '[]');
+    if (entries.length === 0) {
+      entriesList.innerHTML = '<li>No entries yet.</li>';
+    } else {
+      entries.forEach(e => {
+        const li = document.createElement('li');
+        li.textContent = `${e.vin} - ${e.mileage} miles (${e.condition}) - $${e.estimate}`;
+        entriesList.appendChild(li);
+      });
+    }
+  }
+
+  if (!form) return; // Only run trade-in logic on pages with the form
+
+  const user = localStorage.getItem('loggedInUser');
+  if (!user) {
+    form.innerHTML = 'Please <a href="login.html">log in</a> to submit a trade-in.';
+    return;
+  }
 
   form.addEventListener('submit', event => {
     event.preventDefault();
@@ -19,6 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const estimate = estimateValue(vin, mileage, condition);
 
     resultDiv.textContent = `Estimated trade-in value: $${estimate.toLocaleString()}`;
+
+    const entries = JSON.parse(localStorage.getItem('entries') || '[]');
+    entries.push({ vin, mileage, condition, estimate });
+    localStorage.setItem('entries', JSON.stringify(entries));
   });
 });
 
