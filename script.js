@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('tradeInForm');
   const resultDiv = document.getElementById('estimateResult');
 
+  if (!form) return; // Only run on pages with the form
+
   form.addEventListener('submit', event => {
     event.preventDefault();
 
