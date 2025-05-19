@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Trade-In Value Estimator | Your Dealership</title>
-  <meta name="description" content="Get an instant trade-in value for your vehicle from Your Dealership. Simple, fast, and accurate." />
+  <meta name="description" content="Get an instant trade-in value for your vehicle from Your Dealership." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -24,27 +24,16 @@
   <main>
     <section id="trade-in">
       <h2>Trade-In Value Estimator</h2>
-      <p>Enter your vehicle details below to get an estimated trade-in value instantly.</p>
+      <p>Enter your vehicle details below to receive an estimated trade-in value.</p>
       <form id="tradeInForm">
-        <label for="year">Year:</label>
-        <input type="number" id="year" name="year" required />
-
-        <label for="make">Make:</label>
-        <input type="text" id="make" name="make" required />
-
-        <label for="model">Model:</label>
-        <input type="text" id="model" name="model" required />
+        <label for="vin">VIN:</label>
+        <input type="text" id="vin" name="vin" required />
 
         <label for="mileage">Mileage:</label>
         <input type="number" id="mileage" name="mileage" required />
 
-        <label for="condition">Condition:</label>
-        <select id="condition" name="condition" required>
-          <option value="excellent">Excellent</option>
-          <option value="good">Good</option>
-          <option value="fair">Fair</option>
-          <option value="poor">Poor</option>
-        </select>
+        <label for="condition">Condition (brief description):</label>
+        <textarea id="condition" name="condition" rows="4" required></textarea>
 
         <button type="submit">Get Estimate</button>
       </form>
