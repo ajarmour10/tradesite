@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Your Dealership | Inventory</title>
-  <meta name="description" content="Browse vehicles for sale at Your Dealership" />
+  <title>Your Dealership | Login</title>
+  <meta name="description" content="Login to view your trade entries" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -24,19 +24,22 @@
   </header>
 
   <main>
-    <section id="inventory">
-      <h2>Available Vehicles</h2>
-      <p>Our current selection is shown below. Details and photos are coming soon.</p>
-      <ul class="vehicle-list">
-        <li>2021 Sedan - $18,500</li>
-        <li>2020 SUV - $24,000</li>
-        <li>2019 Truck - $27,500</li>
-      </ul>
+    <section id="login">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Login</button>
+      </form>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Your Dealership. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
